@@ -28,11 +28,11 @@ document.querySelector(".check").addEventListener("click", function () {
 
   
   if (!guess || guess < 1 || guess > 20) {
-    displayMessage("⛔️ Invalid guess! Enter a number between 1 and 20.");
+    displayMessage(" Invalid guess! Enter a number between 1 and 20.");
   }
 
   else if (guess === randomNumber) {
-    displayMessage("🎉 Correct guess! You won!");
+    displayMessage(" Correct guess!");
     document.querySelector("body").style.backgroundColor = "#60b347";
     document.querySelector(".number").textContent = randomNumber;
 
@@ -45,11 +45,11 @@ document.querySelector(".check").addEventListener("click", function () {
   
   else if (guess !== randomNumber) {
     if (score > 1) {
-      displayMessage(guess > randomNumber ? "📈 Too high!" : "📉 Too low!");
+      displayMessage(guess > randomNumber ? " Too high!" : " Too low!");
       score--;
       displayScore(score);
     } else {
-      displayMessage("💥 You lost the game!");
+      displayMessage(" You lost the game!");
       displayScore(0);
     }
   }
